@@ -10,14 +10,14 @@ def simData():
     t = 0.0
     while t < t_max:
         t = t + dt
-        x = (1 + 4*np.cos(t)) * np.cos(t)
-        y = (1 + 4*np.cos(t)) * np.sin(t)
+        #x = (1 + 4*np.cos(t)) * np.cos(t)
+        #y = (1 + 4*np.cos(t)) * np.sin(t)
         s = t/(np.pi)
 
         if s%2 < 0.02:
             print t
-        #x = (t) * np.cos(t)
-        #y = (t) * np.sin(t)
+        x = (t) * np.cos(t)
+        y = (t) * np.sin(t)
         #x = (2*np.sin(3*t)) * np.cos(t)
         #y = (2*np.sin(3*t)) * np.sin(t)
         #x = 5 + 3 * np.sin(np.radians(t))
@@ -42,8 +42,8 @@ fig = plt.figure()
 ax = fig.add_subplot(111)
 
 line, = ax.plot([], [], 'bx', ms=10)
-ax.set_xlim(-1, 6)
-ax.set_ylim(-5, 5)
+ax.set_xlim(-6, 6)
+ax.set_ylim(-6, 5)
 
 time_template = 'Time = %.1f s'    # prints running simulation time
 time_text = ax.text(0.05, 0.9, '', transform=ax.transAxes)
